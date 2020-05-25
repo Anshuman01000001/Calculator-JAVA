@@ -4,12 +4,32 @@ public class Main {
 	public static void main(String[]args){
 		Scanner input = new Scanner(System.in);
 		
-		System.out.print("Enter number 1: ");
-		int num1 = input.nextInt();
+		System.out.println("What would you like to do: \n1.Add\t\t2.Subtract\n3.multiply\t4.divide");
 		
-		System.out.print("Enter number 2: ");
-		int num2 = input.nextInt();
+		double finalNumber = 0;
 		
-		System.out.println("The sum of the numbers is: " +(num1+num2));
+		System.out.print("\nEnter choice: ");
+		String choice = input.nextLine();
+		
+		System.out.print("\nEnter number 1: ");
+		double num1 = input.nextDouble();
+		
+		System.out.print("\nEnter number 2: ");
+		double num2 = input.nextDouble();
+		
+		
+		if(choice.equalsIgnoreCase("add"))
+			finalNumber = num1+num2;
+		
+		else if(choice.equalsIgnoreCase("subtract"))
+			finalNumber = num1+num2;
+		
+		else if(choice.equalsIgnoreCase("multiply"))
+			finalNumber = num1*num2;
+		
+		else if(choice.equalsIgnoreCase("divide"))
+			finalNumber = num1/num2;
+		
+		System.out.println("\n\nThe number is: " + finalNumber);
 	}
 }
